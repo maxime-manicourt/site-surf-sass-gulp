@@ -1,0 +1,26 @@
+/* du css classqiue */
+
+@import './common/_variables';
+@import './common/_mixins';
+@import './common/_animations';
+@import './common/_normalize';
+@import './common/_common';
+
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    display:flex;
+    flex-direction: column;
+    color:#444;
+}
+
+@import './elements/_header';
+@import './elements/_footer';
+@import './elements/_content';
+@import './elements/_btn';
+@import './elements/_lateral-nav';
+@import './elements/_slider';

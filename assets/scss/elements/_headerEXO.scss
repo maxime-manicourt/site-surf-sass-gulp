@@ -1,0 +1,75 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: -2px 3px 30px -6px rgba(black, 0.7);
+    height: 110px;
+// & => .header
+    &__container {
+        max-width: 1100px;
+        padding: 10px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    
+    &__logo {
+        width: 90px;
+        height: 90px;
+    }
+    
+    &__nav {
+        display: flex;
+        margin-left: auto;
+    }
+    
+    &__nav a {
+        margin: 0 10px;
+        position: relative;
+        text-transform: uppercase;
+    }
+    
+    &__nav a:hover {
+        color: $green;
+    }
+
+    &__nav a:hover::after {
+        content: ' ';
+        height: 5px;
+        left: 25%;
+        right: 25%;
+        position: absolute;
+        color: $green;
+    }
+}
+
+/*
+.header__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    width: 90px;
+    height: 90px;
+}
+
+.header__nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.header__nav a {
+    margin: 0 10px;
+}
+
+.header__nav a:hover {
+    color: $green;
+}
+*/

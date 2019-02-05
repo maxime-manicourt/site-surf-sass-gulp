@@ -1,0 +1,36 @@
+@import 'common/common';
+@import 'common/normalize';
+@import 'common/variables';
+@import 'common/mixins';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: $grey;
+}
+/**
+// declaration du mixin
+@mixin bgcover($color) {
+    background-size: cover;
+    background-position: center center;
+    background-color: $color;
+}
+
+#header{
+    // utilisation du mixin
+    @include bgcover($green);
+}
+
+@include md{
+    body{
+        color: $blue;
+    }
+}
+*/
+@import 'elements/header';

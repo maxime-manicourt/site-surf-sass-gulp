@@ -1,0 +1,61 @@
+.content{
+    display: flex;
+    min-height: 110vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+    overflow: hidden;
+    position: relative;
+
+    &--blue{
+        background-color:#4fc3f7;color:white;
+    }
+    @media screen and (max-height:800px){
+      min-height: 800px;
+    }
+
+    
+    &__inside{
+
+        max-width: 150ch;
+        margin: 0 auto;
+        @include mdmin{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img{
+        margin: 20px;
+        perspective: 1400px;
+
+        img{
+            transform: rotateY(-8deg);
+        }
+
+
+        @include mdmin{
+            width: 35%;
+            height: auto;
+        }
+    }
+
+    &__txt{
+        flex: 1;
+        font-size: 20px;
+        line-height: 1.3;
+        padding: 3%;
+    }
+
+    &.is-invert{
+        .content__inside{
+            flex-direction: row-reverse;
+        }
+    }
+    
+    
+
+    
+    
+}

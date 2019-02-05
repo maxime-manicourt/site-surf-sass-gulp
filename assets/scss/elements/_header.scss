@@ -1,0 +1,99 @@
+.header{
+    position: fixed;
+    z-index: 50;
+    background: white;
+    box-shadow: -2px 3px 31px -6px rgba(0,0,0,0.75);
+    top:0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    transition: height .3s ease;
+    @include sm{
+        height: 70px;
+    }
+
+    &__container{
+        max-width: 1100px;
+        padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        transition: padding .3s ease;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        height: 90px;
+        width: 90px;
+        text-decoration: none;
+        transition: height .3s ease, width .3s ease;
+        @include sm{
+            width: 50px;
+        }
+        img{
+            display: block;
+            max-height: 100%;
+            width: auto;
+        }
+    }
+    &__nav{
+        display: flex;
+        margin-left: auto;
+
+
+        @include sm{
+            display: none;
+        }
+        a{
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 5px;
+            padding: 5px;
+            text-decoration: none;
+            transition: transform .3s ease;
+            text-transform: uppercase;
+            transition: font-size .3s ease, color .3s ease, transform .3s ease;
+
+            &:hover{
+                color: $blue;
+                transform: translateY(-3px);
+            }
+        }
+    }
+
+
+
+    @at-root .is-small-menu &{
+        height: 40px;
+        .header__container{
+            padding:0;
+        }
+
+        .header__logo{
+            height: 30px;
+        }
+
+        .header__nav{
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+
+}
+
+body{
+    padding-top: 40px;;
+}
+// body{
+//     padding-top: 110px;
+//     @include sm{
+//         padding-top: 70px;
+//     }
+
+//     &.is-small-menu{
+//         padding-top: 40px;
+//     }
+// }
